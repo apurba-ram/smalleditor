@@ -194,15 +194,7 @@ export class MinieditorComponent implements OnInit, OnDestroy, AfterViewInit, On
 
     this.list = true;
     this.indent = true;
-    // this.mentionConfig = [{
-    //   symbol: '@',
-    //   list : [{id: '123', value: 'Alec'}, {id: '124', value: 'Anil'}, {id: '125', value: 'Guna'}, {id: '126', value: 'Suraj'},
-    //           {id: '127', value: 'Nadeem'}, {id: '128', value: 'Esha'}, {id: '129', value: 'Shipra'}, {id: '130', value: 'Zoya'}]
-    // },
-    // {
-    //   symbol: '#',
-    //   list : [{id: '123', value: 'Alec'}, {id: '124', value: 'Shruti'}, {id: '125', value: 'Joyce'}, {id: '126', value: 'Suraj'}]
-    // }];
+    this.file = true;
   }
 
   ngAfterViewInit(): void {

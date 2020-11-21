@@ -152,13 +152,9 @@ export default
         <button mat-flat-button class="blueButton" (click)="comment_action()">{{buttonName}}</button>
     </span>
 </div>
-<div  (click)="falseEmoji()"
-      (paste)="onPaste($event)" class="editor" [class.active]="activeEditorOption"
-      [mentionConfig]="mentionConfig"
-      (closed)="mentionClosed()" contenteditable
-      (input)="setValue($event.target.innerText, $event.target.innerHTML)"
-      (blur)="blur()"
-      [attr.placeholder]="placeholder" [id]="id">
+<div (click)="falseEmoji()" (paste)="onPaste($event)" class="editor" [class.active]="activeEditorOption"
+    [mentionConfig]="mentionConfig" (closed)="mentionClosed()" contenteditable (input)="setValue($event.target.innerText, $event.target.innerHTML)"
+    (blur)="blur()" [attr.placeholder]="placeholder" [id]="id">
 </div>
 
 </div>`;

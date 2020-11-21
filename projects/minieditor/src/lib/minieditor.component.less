@@ -1,5 +1,3 @@
-@import "./mixin.less";
-
 .vc-icons {
     font-family: 'vc-icon' !important;
     font-style : normal;
@@ -55,7 +53,7 @@
 .editorContainer {
     width         : 100%;
     position      : relative;
-    border        : 1px solid @greyPrimary;
+    border        : 1px solid #f1f1f1;
     width         : 100%;
     z-index       : 0;
     border-radius : 4px;
@@ -117,7 +115,7 @@
 }
 
 .borderRgt {
-    border-right: 1px solid @greyPrimary;
+    border-right: 1px solid #f1f1f1;
     padding     : 0 6px;
     margin-right: 10px;
 }
@@ -145,10 +143,10 @@
     }
 
     .blueButton {
-        background: @bluePrimary;
-        .labelFont();
-        color: @whiteColor;
-        .line-height(20);
+        background: #1e5dd3;
+        // .labelFont();
+        color: #FFFFFF;
+        line-height: 20px;
         padding  : 0 15px;
         width    : auto;
         min-width: inherit;
@@ -161,7 +159,7 @@
     button {
         background: transparent;
         border    : 0px;
-        .font-size(14);
+        font-size: 14px;
         width          : 28px;
         height         : 28px;
         margin-right   : 2px;
@@ -191,38 +189,14 @@
         svg {
             width: 13px;
         }
-
-        &.bluetxt {
-            color: @bluePrimary;
-        }
-
-        &.greentxt {
-            color: @greenPrimary;
-        }
-
         &.active {
-            color     : @black;
+            color     : #000000;
             background: #dddddd;
         }
 
         &.yellowtxt {
-            color: @yellowPrimary;
-            .font-size(17);
-        }
-
-        .font17 {
-            .font-size(17);
-        }
-
-        .font12 {
-            font-size: 12px;
-        }
-        .font13 {
-            font-size: 13px;
-        }
-
-        .font14 {
-            font-size: 14px;
+            color: #f0b819;
+            font-size:17px;
         }
 
         span {
@@ -268,13 +242,13 @@
 }
 
 .button:hover {
-    color     : @black;
+    color     : #000000;
     background: #bac7a7;
 }
 
 .tribute {
     background-color: aqua;
-    font            : @lightText;
+    font            : #747576;
 }
 
 ::ng-deep .mention-menu {
@@ -285,7 +259,7 @@
     li a.mention-item {
         padding: 6px 10px;
         display: block;
-        .font-size(13);
+        font-size:13px;
         margin: 5px 0;
     }
 }
@@ -294,7 +268,6 @@
     position: fixed;
     z-index: 1;
     width: 400px;
-    // height: 400px;
     overflow: auto;
     background: #FFFFFF;
     border-radius: 4px;
@@ -365,7 +338,7 @@
 }
 
 .active {
-    color        : @black; 
+    color        : #000000; 
 }
 
 .modal,
@@ -378,14 +351,14 @@
 
         label.labelTitle {
             text-transform: capitalize;
-            .font-size(16);
+            font-size: 16px;
             font-weight: 400;
-            color      : @black;
+            color      : #000000;
             align-items: center;
             padding    : 0 40px;
-            .line-height(60);
+            line-height: 60px;
             justify-content: space-between;
-            border-bottom  : 1px solid @greyTertiary;
+            border-bottom  : 1px solid #f8f8f8;
         }
 
         button.close {
@@ -395,11 +368,11 @@
             z-index   : 9;
             background: transparent;
             border    : none;
-            .font-size(12);
-            color  : @bluePrimary;
+            font-size: 12px;
+            color  : #1e5dd3;
             cursor : pointer;
             outline: none;
-            .line-height(29);
+            line-height: 29px;
         }
     }
 }
@@ -426,13 +399,13 @@
     margin    : 0px;
     left      : 0;
     text-align: left;
-    background: @whiteColor;
+    background: #FFFFFF;
     top       : 0;
-    .line-height(60);
+    line-height: 60px;
     z-index: 1;
-    .font-size(16);
+    font-size: 16px;
     padding      : 0 40px;
-    border-bottom: 1px solid @greyTertiary;
+    border-bottom: 1px solid #f8f8f8;
     box-sizing   : border-box;
     border-radius: 4px 4px 0 0;
     display      : block;
@@ -441,9 +414,9 @@
 .categoryModal,
 .vc-headerTitle {
     mat-list h2 {
-        .font-size(12);
+        font-size: 12px;
         font-weight  : 500;
-        color        : @lightText;
+        color        : #747576;
         margin-bottom: 15px;
     }
 
@@ -458,7 +431,7 @@
 }
 
 .vc-button {
-    background     : @greyQuaternary;
+    background     : #fbfbfb;
     padding        : 13px 30px;
     justify-content: flex-end;
     display        : flex;
@@ -478,19 +451,19 @@
     }
 
     &::-webkit-scrollbar-track {
-        background: @whiteColor;
+        background: #FFFFFF;
     }
 
     &::-webkit-scrollbar-thumb {
-        background: @greyPrimary;
+        background: #dcdcdc;
     }
 
     &::-webkit-scrollbar-thumb:hover {
-        background: @lightText;
+        background: #747576;
     }
 
     .mat-select-value-text {
-        .font-size(13);
+        font-size:13px;
     }
 
     .mat-form-field-type-mat-select .mat-form-field-flex>.mat-form-field-infix {
@@ -501,7 +474,7 @@
         width: 100%;
 
         &-container {
-            border-bottom: 1px solid @greyQuaternary;
+            border-bottom: 1px solid #fbfbfb;
         }
     }
 
@@ -523,11 +496,11 @@
         line-height    : 3.75rem;
         text-transform : capitalize;
         font-weight    : 500;
-        color          : @black;
+        color          : #000000;
         align-items    : center;
         padding        : 0 20px;
         justify-content: space-between;
-        background     : @greySecondary;
+        background     : #f1f1f1;
         border-radius  : 3px 3px 0 0;
     }
 
@@ -540,7 +513,7 @@
         z-index    : 9;
         background : 0 0;
         border     : none;
-        color      : @black;
+        color      : #000000;
         cursor     : pointer;
         outline    : 0;
     }
@@ -558,19 +531,19 @@
     }
 
     .vc-button {
-        background: @greySecondary;
+        background: #f1f1f1;
 
         button {
-            .font-size(11);
+            font-size:11px;
             cursor: pointer;
 
             &.greyButton {
-                color: @bluePrimary;
+                color: #1e5dd3;
             }
 
             &.vc-submitBtn {
-                background : @bluePrimary;
-                color      : @whiteColor;
+                background : #1e5dd3;
+                color      : #FFFFFF;
                 margin-left: 10px;
             }
         }

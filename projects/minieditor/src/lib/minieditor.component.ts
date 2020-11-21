@@ -1,16 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import {
-  OnDestroy,
-  forwardRef,
-  Input,
-  Output,
-  EventEmitter,
-  AfterViewInit,
-  OnChanges,
-  ViewChild,
-  ElementRef,
-  SimpleChanges
-} from '@angular/core';
+import { Component, OnInit, OnDestroy, forwardRef, Input, Output, EventEmitter, AfterViewInit, OnChanges, ViewChild, ElementRef, SimpleChanges} from '@angular/core';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
 import { nanoid } from 'nanoid';
 

@@ -1,8 +1,22 @@
+@font-face {
+    font-family: 'editor';
+    src:  url('../fonts/icomoon.eot?7yfbdv');
+    src:  url('../fonts/icomoon.eot?7yfbdv#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?7yfbdv') format('truetype'),
+      url('../fonts/icomoon.woff?7yfbdv') format('woff'),
+      url('../fonts/icomoon.svg?7yfbdv#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
 .vc-icons {
-    font-family: 'vc-icon' !important;
+    font-family: 'editor' !important;
     font-style : normal;
 }
-
+* {
+    font-family: "Nunito Sans", sans-serif;
+}
 .attachedBtn {
     position: relative;
 
@@ -167,19 +181,18 @@
         background: transparent;
         border    : 0px;
         font-size: 14px;
-        width          : 28px;
-        height         : 28px;
+        width          : 30px;
+        height         : 38px;
         margin-right   : 2px;
         padding        : 0px;
-        border-radius  : 3px;
+        border-radius  : 2px;
         cursor         : pointer;
-        color          : #161b2f;
+        color          : rgb(0, 0, 0, .5);
         display        : flex !important;
         align-items    : center;
         justify-content: center;
         &+button {
             margin-left: 0;
-            margin-right: 0;
         }
         * {
             pointer-events: none;
@@ -235,14 +248,14 @@
     }
 
     &.active {
+        background: transparent;
+        border-radius: 0px;
+        border-bottom: 1px solid #f1f1f1;
         opacity: 1;
+        padding: 0 6px;
         pointer-events: auto;
         position: static;
-        background: #f9f9f9;
-        padding        : 3px 6px;
-        border-radius: 4px;
         width: 100%;
-        box-shadow: 0px 0px 5px -2px #ccc;
         .controls-left {
             display: flex;
             justify-content: space-between;

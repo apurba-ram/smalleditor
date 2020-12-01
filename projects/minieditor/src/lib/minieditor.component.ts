@@ -357,10 +357,10 @@ export class MinieditorComponent implements OnInit, OnDestroy, AfterViewInit, On
 
   applyColor(event): void {
     this.colorPicker = !this.colorPicker;
-    const popover = event.target.parentElement.getBoundingClientRect();
+    const popover = event.target.getBoundingClientRect();
     console.log(popover);
-    this.popoverTop = popover.top - popover.height;
-    this.popoverLeft = popover.top - (popover.width / 2);
+    this.popoverTop = popover.top - 82;
+    this.popoverLeft = popover.left - 50;
   }
   reachTextNode(tagName: string): void {
     const parent = this.getParent(this.sel.anchorNode, tagName);

@@ -246,7 +246,7 @@
         }
     }
     .color-picker {
-        width: 150px;
+        width: 100px;
         position: fixed;
         box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.31) 0px 0px 1px;
         border-radius: 2px;
@@ -258,26 +258,48 @@
             flex-wrap: wrap;
             li {
                 list-style: none;
-                width: 20%;
                 padding: 5px;
-                span {
-                    height: 20px;
-                    width: 20px;
-                    border-radius: 50%;
+                width: calc(100% / 3);
+                display: flex;
+                box-sizing: border-box;
+                justify-content: center;
+                label {
                     position: relative;
-                    display: block;
-                    &:before {
-                        content: "";
-                        width: 10px;
-                        height: 20px;
-                        border-bottom: 2px solid #ffffff;
-                        border-right: 2px solid #ffffff;
-                        transform: rotate(-45deg);
+                    margin: 0;
+                    padding: 0;
+                    cursor: pointer;
+
+                    input {
+                        height: 0;
+                        width: 0;
                         position: absolute;
-                        z-index: 1;
-                        top: 0;
                         left: 0;
+                        top: 0;
+                        &:checked {
+                            &+span {
+                                &:before {
+                                    border-bottom: 1px solid #fff;
+                                    border-right: 1px solid #fff;
+                                    content: "";
+                                    height: 6px;
+                                    left: 5px;
+                                    position: absolute;
+                                    top: 2px;
+                                    transform: rotate(45deg);
+                                    width: 2px;
+                                    z-index: 1;
+                                }
+                            }
+                        }
                     }
+                }
+                span {
+                    border-radius: 50%;
+                    display: block;
+                    height: 14px;
+                    position: relative;
+                    width: 14px;
+                    margin-right: 0;
                     &.red {
                         background: #ff5630;
                     }

@@ -44,6 +44,23 @@ export default
                 <button class="button" [class.active]="decreaseIndent" (click)="decreaseIndentation()">
                     <i class="vc-icons">&#xe90a;</i>
                 </button>
+                <button class="button" [class.active]="colorPicker" (click)="applyColor($event)">
+                    <i class="vc-icons">&#xe90a;</i>
+                </button>
+                <div class="color-picker" *ngIf="colorPicker">
+                    <ul class="colors">
+                        <li><span class="red"></span></li>
+                        <li><span class="black"></span></li>
+                        <li><span class="grey"></span></li>
+                        <li><span class="green"></span></li>
+                        <li><span class="purple"></span></li>
+                        <li><span class="orange"></span></li>
+                        <li><span class="teal"></span></li>
+                        <li><span class="blue"></span></li>
+                        <li><span class="yellow"></span></li>
+                        <li><span class="sky"></span></li>
+                    </ul>
+                </div>
             </span>
         </span>
         <div class="right">

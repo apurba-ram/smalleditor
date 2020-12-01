@@ -81,7 +81,9 @@ export class MinieditorComponent implements OnInit, OnDestroy, AfterViewInit, On
   positionY;
   windowWidth;
   activeEditorOption;
-
+  colorPicker: boolean;
+  popoverTop: number;
+  popoverLeft: number;
   ngOnChanges(changes: SimpleChanges): void {
 
     if (changes.mentionedNames || changes.mentionedDates) {
@@ -353,6 +355,13 @@ export class MinieditorComponent implements OnInit, OnDestroy, AfterViewInit, On
     document.execCommand('outdent', false, '');
   }
 
+  applyColor(event): void {
+    this.colorPicker = !this.colorPicker;
+    const popover = event.target.parentElement.getBoundingClientRect();
+    console.log(popover);
+    this.popoverTop = popover.top - popover.height;
+    this.popoverLeft = popover.top - (popover.width / 2);
+  }
   reachTextNode(tagName: string): void {
     const parent = this.getParent(this.sel.anchorNode, tagName);
     const space = document.createElement('text');

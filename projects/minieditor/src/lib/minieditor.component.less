@@ -245,6 +245,74 @@
             }
         }
     }
+    .color-picker {
+        width: 150px;
+        position: fixed;
+        box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.31) 0px 0px 1px;
+        border-radius: 2px;
+        background: #FFFFFF;
+        ul.colors {
+            padding: 5px;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            li {
+                list-style: none;
+                width: 20%;
+                padding: 5px;
+                span {
+                    height: 20px;
+                    width: 20px;
+                    border-radius: 50%;
+                    position: relative;
+                    display: block;
+                    &:before {
+                        content: "";
+                        width: 10px;
+                        height: 20px;
+                        border-bottom: 2px solid #ffffff;
+                        border-right: 2px solid #ffffff;
+                        transform: rotate(-45deg);
+                        position: absolute;
+                        z-index: 1;
+                        top: 0;
+                        left: 0;
+                    }
+                    &.red {
+                        background: #ff5630;
+                    }
+                    &.black {
+                        background: #000000;
+                    }
+                    &.grey {
+                        background: #414141;
+                    }
+                    &.green {
+                        background: #36b37e;
+                    }
+                    &.purple {
+                        background: #6554c0;
+                    }
+                    &.orange {
+                        background: #ff7a00;
+                    }
+                    &.teal {
+                        background: #008299;
+                    }
+                    &.blue {
+                        background: #1e5dd3;
+                    }
+                    &.yellow {
+                        background: #f0b819;
+                    }
+                    &.sky {
+                        background: #00fff7;
+                    }
+                }
+                
+            }
+        }
+    }
 
     &.active {
         background: transparent;

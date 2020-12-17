@@ -194,9 +194,9 @@ export class MinieditorComponent implements OnInit, OnDestroy, AfterViewInit, On
 
     document.addEventListener('selectionchange', this.selectFunction, false);
 
-    this.list = true;
-    this.indent = true;
-    this.file = true;
+    // this.list = true;
+    // this.indent = true;
+    // this.file = true;
   }
 
   ngAfterViewInit(): void {

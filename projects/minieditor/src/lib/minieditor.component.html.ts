@@ -74,7 +74,7 @@ export default
                         class="vc-icons">&#xe90a;</i></button>
             </span>
             <span *ngIf="file">
-                <span class="button greentxt attachedBtn">
+                <span class="attachedBtn">
                     <input type="file" (change)="onFileChange($event)"><span><i class="vc-icons">&#xe900;</i></span>
                 </span>
             </span>

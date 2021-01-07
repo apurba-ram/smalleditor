@@ -38,7 +38,6 @@ export class MinieditorComponent implements OnInit, OnDestroy, AfterViewInit, On
   @Output() comment: EventEmitter<any> = new EventEmitter();  // Output emitter for exporting comment data
   @Output() files: EventEmitter<any> = new EventEmitter(); // Output emitter for exporting file data
 
-  @ViewChild('textArea', { static: false }) textArea: ElementRef;
   mentionid: string | number;
   oldRange: any;
   selectFunction: any;

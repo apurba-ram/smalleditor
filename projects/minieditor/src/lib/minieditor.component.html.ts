@@ -44,7 +44,7 @@ export default
                 <button class="button" [class.active]="decreaseIndent" (click)="decreaseIndentation()">
                     <i class="vc-icons">&#xe90a;</i>
                 </button>
-                <button class="button" [class.active]="colorPicker" (click)="applyColor($event)">
+                <button class="button" [class.active]="colorPicker" (click)="applyColor($event)" *ngIf="colorPicker">
                     <i class="vc-icons">&#xe907;</i>
                 </button>
                 <div class="color-picker" *ngIf="colorPicker" [style.left.px]="popoverLeft" [style.top.px]="popoverTop">

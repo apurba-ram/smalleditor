@@ -1,8 +1,7 @@
 import { Component, OnInit, OnDestroy,
    forwardRef, Input,
    Output, EventEmitter,
-   AfterViewInit, OnChanges,
-  ViewChild, ElementRef, SimpleChanges} from '@angular/core';
+   AfterViewInit, OnChanges, SimpleChanges} from '@angular/core';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
 import { nanoid } from 'nanoid';
 import template from './minieditor.component.html';
@@ -38,8 +37,8 @@ export class MinieditorComponent implements OnInit, OnDestroy, AfterViewInit, On
   @Input() placeholder: string;
   @Output() comment: EventEmitter<any> = new EventEmitter();  // Output emitter for exporting comment data
   @Output() files: EventEmitter<any> = new EventEmitter(); // Output emitter for exporting file data
+  @Output() valueChange: EventEmitter<any> = new EventEmitter(); // Output emitter for exporting file data
 
-  @ViewChild('textArea', { static: false }) textArea: ElementRef;
   mentionid: string | number;
   oldRange: any;
   selectFunction: any;
@@ -82,7 +81,7 @@ export class MinieditorComponent implements OnInit, OnDestroy, AfterViewInit, On
   positionY;
   windowWidth;
   activeEditorOption;
-  colorPicker: boolean;
+  colorPicker = false;
   popoverTop: number;
   popoverLeft: number;
   ngOnChanges(changes: SimpleChanges): void {
@@ -126,10 +125,6 @@ export class MinieditorComponent implements OnInit, OnDestroy, AfterViewInit, On
           dropUp: true
         });
       }
-    }
-
-    if (this.value !== null && this.value !== undefined) {
-      this.populateEditor();
     }
   }
 
@@ -178,6 +173,9 @@ export class MinieditorComponent implements OnInit, OnDestroy, AfterViewInit, On
   ngOnInit(): void {
     this.sel = window.getSelection();
     this.showEmoji = false;
+    if (this.value !== null && this.value !== undefined) {
+      this.populateEditor();
+    }
 
     this.selectFunction = () => {
       if (document.activeElement === document.getElementById(this.id)) {
@@ -537,8 +535,10 @@ export class MinieditorComponent implements OnInit, OnDestroy, AfterViewInit, On
       this.flag = this.lastChar === '@' ? 0 : 1;
       this.startOffset = this.sel.getRangeAt(0).startOffset;
     }
-
-    this.writeValue(document.getElementById(`${this.id}`).innerHTML);
+    const content = document.getElementById(`${this.id}`).innerHTML;
+    // this.writeValue(content);
+    this.value = content;
+    this.valueChange.emit(this.value);
   }
 
   // Handling character insert from buttons @, # , etc

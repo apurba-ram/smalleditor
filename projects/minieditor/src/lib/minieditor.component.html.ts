@@ -15,7 +15,6 @@ export default
             <button class="button " [class.active]="underline" (click)="insertUnderLine()">
                 <i class="vc-icons">&#xe915;</i>
             </button>
-            <button *ngIf="link" class="button"><i class="vc-icons" (click)="openDialog()">&#xe90d;</i></button>
             <button class="button" (click)="insertSupTag()" [class.active]="supTag">
                 <i class="vc-icons">&#xe914;</i>
             </button>
@@ -81,7 +80,7 @@ export default
         </div>
     </div>
     <span *ngIf="buttonName !== ''">
-        <button mat-flat-button class="blueButton" (click)="comment_action()">{{buttonName}}</button>
+        <button class="blueButton" [disabled]="buttonDisabled" (click)="comment_action()">{{buttonName}}</button>
     </span>
 </div>
 <div (click)="falseEmoji()" (paste)="onPaste($event)" class="editor" [class.active]="activeEditorOption"

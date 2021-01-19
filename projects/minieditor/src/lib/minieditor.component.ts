@@ -28,7 +28,8 @@ export class MinieditorComponent implements OnInit, OnDestroy, AfterViewInit, On
   @Input() mentionedDates: {date: string}[];
   @Input() list: boolean;
   @Input() indent: boolean;
-  @Input() link: boolean;
+  @Input() buttonDisabled: boolean;
+  // @Input() link: boolean;
   @Input() file: boolean;
   @Input() button: boolean;
   @Input() buttonName: string;

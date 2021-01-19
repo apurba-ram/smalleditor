@@ -176,6 +176,10 @@
         padding  : 0 15px;
         width    : auto;
         min-width: inherit;
+        &:disabled {
+            pointer-events: none;
+            filter: grayscale(100%);
+        }
 
         @media (max-width: 480px) {
             padding: 0 5px;
@@ -356,6 +360,24 @@
             display: flex;
             justify-content: space-between;
             width: 100%;
+        }
+    }
+    .attachedBtn {
+        background: transparent;
+        border    : 0px;
+        font-size: 14px;
+        width          : 30px;
+        height         : 38px;
+        margin-right   : 2px;
+        padding        : 0px;
+        border-radius  : 2px;
+        cursor         : pointer;
+        color          : #000000;
+        display        : flex !important;
+        align-items    : center;
+        justify-content: center;
+        i {
+            font-size: 14px;
         }
     }
 }
@@ -668,3 +690,8 @@
         }
     }
 }
+// <button *ngIf="link" class="button"><i class="vc-icons" (click)="openDialog()">&#xe90d;</i>
+//                 <div class="color-picker" *ngIf="colorPicker" [style.left.px]="popoverLeft" [style.top.px]="popoverTop">
+
+//                 </div>
+//             </button>
